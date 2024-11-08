@@ -17,7 +17,8 @@ const FullName = () => {
         setToggleSubmit(false); 
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if(fullName.firstName !== '' && fullName.lastName !== '')
         {
             setToggleSubmit(true);
