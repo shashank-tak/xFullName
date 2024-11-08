@@ -26,6 +26,7 @@ const FullName = () => {
     };
 
     return (
+        <>
         <form style={{display: 'flex', flexDirection: 'column', alignItems: 'start', paddingLeft: '10px'}}>
             <h1>Full Name Display</h1>
             <div>
@@ -37,8 +38,9 @@ const FullName = () => {
                 <input label='First Name' name='lastName' type='text' value={fullName.lastName} onChange={handleInputChange} required/>
             </div>
             <button type='submit' onClick={handleSubmit}>Submit</button>
-            {toggleSubmit && <p>Full Name: {fullName.firstName} {fullName.lastName}</p>}
         </form>
+        {toggleSubmit && (<p>Full Name: {fullName.firstName} {fullName.lastName}</p>)}
+        </>
     );
 };
 
