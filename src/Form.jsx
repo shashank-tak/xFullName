@@ -35,7 +35,7 @@ const FullName = () => {
                 <label>Last Name:</label>
                 <input label='First Name' name='lastName' type='text' value={fullName.lastName} onChange={handleInputChange} required/>
             </div>
-            <button onClick={handleSubmit}>Submit</button>
+            <button type='submit' onClick={handleSubmit}>Submit</button>
             {toggleSubmit && <p>Full Name: {fullName.firstName} {fullName.lastName}</p>}
         </form>
     );
